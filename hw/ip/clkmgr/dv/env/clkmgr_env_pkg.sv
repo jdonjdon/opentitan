@@ -120,6 +120,19 @@ package clkmgr_env_pkg;
   };
 
   // functions
+  function void print_hintable(hintables_t tbl);
+    foreach (tbl[i]) begin
+      `uvm_info("HINTBL",$sformatf("entry%0d : %b",i,tbl[i]),UVM_NONE)
+    end
+  endfunction // print_hintable
+
+  function void print_mubi_hintable(mubi_hintables_t tbl);
+    string val = "INVALID";
+    foreach (tbl[i]) begin
+      if(tbl[i].name !="") val = tbl[i].name;
+      `uvm_info("MUBIHINTBL",$sformatf("entry%0d : %s",i,val),UVM_NONE)
+    end
+  endfunction // print_hintable
 
   // package sources
   `include "clkmgr_env_cfg.sv"
