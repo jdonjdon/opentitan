@@ -5,3 +5,4 @@
 `include "usbdev_base_vseq.sv"
 `include "usbdev_smoke_vseq.sv"
 `include "usbdev_common_vseq.sv"
+`include "usb20_vseq.sv"
