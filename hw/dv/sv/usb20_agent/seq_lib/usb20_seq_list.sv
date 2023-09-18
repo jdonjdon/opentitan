@@ -3,4 +3,3 @@
 // SPDX-License-Identifier: Apache-2.0
 
 `include "usb20_base_seq.sv"
-`include "usb20_seq.sv"
